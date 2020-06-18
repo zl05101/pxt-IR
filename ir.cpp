@@ -28,18 +28,18 @@ enum class Pins{
 };
 
 enum class RemoteButton {
-    CH_MINUS = 0xA2,
+      CH_MINUS = 0xa2,
 	  CH = 0x62,
-	  CH_ADD = 0xE2,
+	  CH_Add = 0xe2,
 	  PREV = 0x22,
-	  NEXT = 0x02,
-	  PLAY = 0xC2,
-	  Minus = 0xE0,
-	  Add = 0xA8,
+	  PLAY = 0xc2,
+	  NUM_200 = 0xb0,
+	  NEXT = 0x2,
+	  NUM_100 = 0x98,
+	  Minus = 0xe0,
+	  Add = 0xa8,
 	  EQ = 0x90,
 	  NUM0 = 0x68,
-	  NUM_100 = 0x98,
-	  NUM_200 = 0xB0,
 	  NUM1 = 0x30,
 	  NUM2 = 0x18,
 	  NUM3 = 0x7A,
@@ -47,7 +47,7 @@ enum class RemoteButton {
 	  NUM5 = 0x38,
 	  NUM6 = 0x5a,
 	  NUM7 = 0x42,
-	  NUM8 = 0x4A,
+	  NUM8 = 0x4a,
 	  NUM9 = 0x52
 };
 
