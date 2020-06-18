@@ -26,7 +26,7 @@
 
     declare enum RemoteButton {
     }
-declare namespace Mbit_IR {
+declare namespace IR {
     CH_MINUS = 0xA2,
 	  CH = 0x62,
 	  CH_ADD = 0xE2,
