@@ -25,8 +25,6 @@
 
 
     declare enum RemoteButton {
-    }
-declare namespace IR {
     CH_MINUS = 0xA2,
 	  CH = 0x62,
 	  CH_ADD = 0xE2,
@@ -48,6 +46,9 @@ declare namespace IR {
 	  NUM7 = 0x42,
 	  NUM8 = 0x4A,
 	  NUM9 = 0x52,
+    }
+
+declare namespace xd_IR {
 }
 
 // Auto-generated. Do not edit. Really.

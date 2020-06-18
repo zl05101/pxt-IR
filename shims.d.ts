@@ -10,14 +10,14 @@ declare namespace IR {
      * button pushed.
      */
     //% blockId=ir_received_left_event
-    //% block="on |%btn| button pressed" shim=IR::onPressEvent
+    //% block="on |%btn| button pressed" shim=xd_IR::onPressEvent
     function onPressEvent(btn: RemoteButton, body: () => void): void;
 
     /**
      * initialises local variablesssss
      */
     //% blockId=ir_init
-    //% block="connect ir receiver to %pin" shim=IR::init
+    //% block="connect ir receiver to %pin" shim=xd_IR::init
     function init(pin: Pins): void;
 }
 
