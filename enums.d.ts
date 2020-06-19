@@ -25,7 +25,7 @@
 
 
     declare enum RemoteButton {   
-      CH_MINUS = 0x5d,
+      CH_MINUS = 0xa2,
 	  CH = 0x62,
 	  CH_Add = 0xe2,
 	  PREV = 0x22,
