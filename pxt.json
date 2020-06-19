@@ -1,10 +1,11 @@
 {
-    "name": "IR_Recv",
-    "version": "1.0.0",
-    "description": "Extension for IR receiver module",
+    "name": "IR",
+    "version": "0.0.1",
+    "description": "IR receive for microbit",
     "license": "MIT",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "radio": "*"
     },
     "files": [
         "shims.d.ts",
@@ -16,5 +17,12 @@
         "TransmitterIR.cpp",
         "TransmitterIR.h"
     ],
-    "public": true
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
 }

@@ -1,7 +1,8 @@
 // Auto-generated. Do not edit.
 
 
-declare enum Pins {
+    declare const enum Pins {
+    P0 = 3,
     P1 = 2,
     P2 = 1,
     P3 = 4,
@@ -20,34 +21,33 @@ declare enum Pins {
     P16 = 16,
     P19 = 0,
     P20 = 30,
-}
+    }
 
 
-declare enum RemoteButton {   
-    CH_MINUS = 0xa2,
-	  CH = 0x62,
-	  CH_Add = 0xe2,
-	  PREV = 0x22,
-	  PLAY = 0xc2,
-	  NUM_200 = 0xb0,
-	  NEXT = 0x2,
-	  NUM_100 = 0x98,
-	  Minus = 0xe0,
-	  Add = 0xa8,
-	  EQ = 0x90,
-	  NUM0 = 0x68,
-	  NUM1 = 0x30,
-	  NUM2 = 0x18,
-	  NUM3 = 0x7A,
-	  NUM4 = 0x10,
-	  NUM5 = 0x38,
-	  NUM6 = 0x5a,
-	  NUM7 = 0x42,
-	  NUM8 = 0x4A,
-	  NUM9 = 0x52,
-}
-
-declare namespace xd_IR {
+    declare const enum RemoteButton {
+    CH_MINUS = 0x45,
+    CH = 0x46,
+    CH_Add = 0x47,
+    PREV = 0x44,
+    PLAY = 0x43,
+    NUM_200 = 0xd,
+    NEXT = 0x40,
+    NUM_100 = 0x19,
+    Minus = 0x7,
+    Add = 0x15,
+    EQ = 0x9,
+    NUM0 = 0x16,
+    NUM1 = 0xc,
+    NUM2 = 0x18,
+    NUM3 = 0x5e,
+    NUM4 = 0x8,
+    NUM5 = 0x1c,
+    NUM6 = 0x5a,
+    NUM7 = 0x42,
+    NUM8 = 0x52,
+    NUM9 = 0x4A,
+    }
+declare namespace IR {
 }
 
 // Auto-generated. Do not edit. Really.

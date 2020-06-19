@@ -6,53 +6,56 @@ using namespace pxt;
 typedef vector<Action> vA;
 
 enum class Pins{
-  P1=  2,
-  P2=  1,
-  P3=  4,
-  P4=  5,
-  P5=  17,
-  P6=  12,
-  P7=  11,
-  P8=  18,
-  P9=  10,
-  P10= 6,
-  P11= 26,
-  P12= 20,
-  P13= 23,
-  P14= 22,
-  P15= 21,
-  P16= 16,
-  P19= 0,
-  P20= 30
+    P0=  3,
+    P1=  2,
+    P2=  1,
+    P3=  4,
+    P4=  5,
+    P5=  17,
+    P6=  12,
+    P7=  11,
+    P8=  18,
+    P9=  10,
+    P10= 6,
+    P11= 26,
+    P12= 20,
+    P13= 23,
+    P14= 22,
+    P15= 21,
+    P16= 16,
+    P19= 0,
+    P20= 30
 };
 
+//解码接收按低位开始处理 比如实际键值为 0xA2 = 1010 0010
+//因是低位先处理所以变为 0100 0101 = 0x45 所以此处填写的键值为反的
 enum class RemoteButton {
-    CH_MINUS = 0xa2,
-	  CH = 0x62,
-	  CH_Add = 0xe2,
-	  PREV = 0x22,
-	  PLAY = 0xc2,
-	  NUM_200 = 0xb0,
-	  NEXT = 0x2,
-	  NUM_100 = 0x98,
-	  Minus = 0xe0,
-	  Add = 0xa8,
-	  EQ = 0x90,
-	  NUM0 = 0x68,
-	  NUM1 = 0x30,
-	  NUM2 = 0x18,
-	  NUM3 = 0x7A,
-	  NUM4 = 0x10,
-	  NUM5 = 0x38,
-	  NUM6 = 0x5a,
-	  NUM7 = 0x42,
-	  NUM8 = 0x4a,
-	  NUM9 = 0x52
+    CH_MINUS = 0x45,
+    CH = 0x46,
+    CH_Add = 0x47,
+    PREV = 0x44,
+    PLAY = 0x43,
+    NUM_200 = 0xd,
+    NEXT = 0x40,
+    NUM_100 = 0x19,
+    Minus = 0x7,
+    Add = 0x15,
+    EQ = 0x9,
+    NUM0 = 0x16,
+    NUM1 = 0xc,
+    NUM2 = 0x18,
+    NUM3 = 0x5e,
+    NUM4 = 0x8,
+    NUM5 = 0x1c,
+    NUM6 = 0x5a,
+    NUM7 = 0x42,
+    NUM8 = 0x52,
+    NUM9 = 0x4A
 };
 
-//% color=50 weight=19
+//% color=0855AA weight=19
 //% icon="\uf1eb"
-namespace xd_IR {
+namespace IR {
   map<RemoteButton, vA> actions;
   map<RemoteButton, uint32_t> lastact;
   Timer tsb;
@@ -65,7 +68,7 @@ namespace xd_IR {
   * button pushed.
   */
   //% blockId=ir_received_left_event
-  //% block="on |%btn| button pressed"
+  //% block="红外遥控 |%btn| 键按下"
   void onPressEvent(RemoteButton btn, Action body) {
     //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
     actions[btn].push_back(body);
@@ -95,10 +98,20 @@ namespace xd_IR {
   * initialises local variablesssss
   */
   //% blockId=ir_init
-  //% block="connect ir receiver to %pin"
+  //% block="设置红外接收引脚 %pin"
   void init(Pins pin){
     rx = new ReceiverIR((PinName)pin);
     tsb.start(); //interrupt timer for debounce
     create_fiber(monitorIR);
   }
+#if 0
+  /**
+  * get key val
+  */
+  //% blockId=ir_get_key
+  //% block="getKey"
+  int getKey(){
+      return buf[2];
+  }
+#endif
 }
