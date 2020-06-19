@@ -1,10 +1,7 @@
 // Auto-generated. Do not edit.
-
-
-
     //% color="#31C7D5" weight=19
     //% icon="\uf1eb"
-declare namespace IR {
+declare namespace IR_Recv {
 
     /**
      * button pushed.

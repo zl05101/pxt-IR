@@ -6,7 +6,6 @@ using namespace pxt;
 typedef vector<Action> vA;
 
 enum class Pins{
-  P0=  3,
   P1=  2,
   P2=  1,
   P3=  4,
@@ -28,7 +27,7 @@ enum class Pins{
 };
 
 enum class RemoteButton {
-      CH_MINUS = 0xa2,
+    CH_MINUS = 0xa2,
 	  CH = 0x62,
 	  CH_Add = 0xe2,
 	  PREV = 0x22,
@@ -76,9 +75,6 @@ namespace xd_IR {
 
   void onReceivable(){
     int x = rx->getData(&fmt, buf, 32 * 8);
-    for(uint8_t i = 0; i < 4; i++){
-      serial.writeNumber(buf[i]);
-    }
     if(actions.find((RemoteButton)buf[2]) == actions.end()) return;
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;

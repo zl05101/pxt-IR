@@ -1,8 +1,7 @@
 // Auto-generated. Do not edit.
 
 
-    declare enum Pins {
-    P0 = 3,
+declare enum Pins {
     P1 = 2,
     P2 = 1,
     P3 = 4,
@@ -21,11 +20,11 @@
     P16 = 16,
     P19 = 0,
     P20 = 30,
-    }
+}
 
 
-    declare enum RemoteButton {   
-      CH_MINUS = 0xa2,
+declare enum RemoteButton {   
+    CH_MINUS = 0xa2,
 	  CH = 0x62,
 	  CH_Add = 0xe2,
 	  PREV = 0x22,
@@ -46,7 +45,7 @@
 	  NUM7 = 0x42,
 	  NUM8 = 0x4A,
 	  NUM9 = 0x52,
-    }
+}
 
 declare namespace xd_IR {
 }
