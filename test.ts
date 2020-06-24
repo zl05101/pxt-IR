@@ -11,12 +11,12 @@ IR.onPressEvent(RemoteButton.CH, function () {
     serial.writeString("ch")
 })
 
-IR.onPressEvent(RemoteButton.CH_Add, function () {
+IR.onPressEvent(RemoteButton.CH_ADD, function () {
     serial.writeString("ch+")
 })
 
 
-IR.onPressEvent(RemoteButton.NUM2, function () {
+IR.onPressEvent(RemoteButton.NUM_2, function () {
     serial.writeString("2")
 })
 

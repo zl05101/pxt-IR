@@ -4,6 +4,7 @@
 
     //% color=0855AA weight=19
     //% icon="\uf1eb"
+    //% block="红外"
 declare namespace IR {
 
     /**
